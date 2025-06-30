@@ -10,14 +10,16 @@
 // for (int i = 0; i < n; i++)
 // cin >> arr[i];
 //
-// bool needTwoColors = false;
+// int maxSameGroup = 1, currentGroup = 1;
+//
 // for (int i = 1; i < n; i++) {
-// if (arr[i] == arr[i - 1]) {
-// needTwoColors = true;
-// break;
-// }
+// if (arr[i] == arr[i - 1])
+// currentGroup++;
+// else
+// currentGroup = 1;
+// maxSameGroup = max(maxSameGroup, currentGroup);
 // }
 //
-// cout << (needTwoColors ? 2 : 1) << endl;
+// cout << maxSameGroup << endl;
 // return 0;
 // }
